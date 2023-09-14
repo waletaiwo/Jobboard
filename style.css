@@ -1,0 +1,1110 @@
+/*---- Google Fonts CDN Link ---- */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  color: #65656a;
+  font-size: 14px;
+  font-family: "Jost", sans-serif;
+  margin: 0;
+  overflow-x: hidden !important;
+  font-weight: 400;
+}
+
+a {
+  color: #111111;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===================================
+    NAV SECTION STARTS HERE
+====================================== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  height: 60px;
+  z-index: 6;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+nav .navbar {
+  max-width: 1200px;
+  margin: auto;
+  /* background: red; */
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.navbar .nav-logo a {
+  color: #404656;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.navbar .nav-links-wrapper {
+  display: flex;
+  /* height: 100%; */
+  /* line-height: 70px; */
+}
+
+.navbar .nav-links-wrapper .nav-link {
+  display: flex;
+}
+
+.navbar .nav-links-wrapper li {
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.navbar .nav-links-wrapper li a {
+  color: #172228;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links-wrapper .nav-link li .arrow {
+  width: 10px;
+  color: #172228;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links-wrapper li a:hover,
+.navbar .nav-links-wrapper .nav-link li:hover .arrow {
+  color: #28b661;
+}
+
+.navbar .nav-links-wrapper .navlink a:focus {
+  color: #28b661;
+}
+
+.navbar .nav-links-wrapper .nav-link .nav-sublink {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  line-height: 30px;
+  width: 200px;
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  z-index: 90;
+  display: none;
+  transition: all 0.3s ease 0s;
+  /* opacity: 0;
+  visibility: hidden; */
+}
+
+.navbar .nav-links-wrapper .nav-link .nav-sublink li {
+  width: 100%;
+  /* padding: 0 40px; */
+}
+
+.navbar .nav-links-wrapper .nav-link .nav-sublink li a {
+  width: 100%;
+  color: #333c56;
+  border-bottom: 1px solid #e4e8ec;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+
+.navbar .nav-links-wrapper .nav-link li:hover .nav-dropdown1,
+.navbar .nav-links-wrapper .nav-link li:hover .nav-dropdown2 {
+  display: block;
+  /* opacity: 1;
+  visibility: visible; */
+}
+
+.navbar .bx-menu,
+.nav-links-wrapper .nav-menu-close-btn .bx-x {
+  display: none;
+}
+
+.sign-in {
+  cursor: pointer;
+  color: #28b661;
+  font-size: 20px;
+}
+
+/* ===================================
+    HERO SECTION STARTS HERE
+====================================== */
+
+.hero {
+  background-image: url("./assets/img/job1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  color: #fff;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.hero h1 {
+  font-size: 46px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.hero .hero-form {
+  z-index: 100;
+  width: 100%;
+}
+
+.hero .hero-form select {
+  z-index: inherit;
+  width: 100%;
+}
+
+.hero .hero-form input {
+  background-color: green;
+}
+
+/* ===================================
+    JOB LIST STARTS HERE
+====================================== */
+
+.job-category {
+  margin-top: 30px;
+  padding: 30px 0 50px;
+}
+
+.job-list {
+  margin-top: 30px;
+  padding: 30px 0 50px;
+}
+
+.job-list-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.job-list-title h6 {
+  color: #656b78 !important;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.job-list-title h2 {
+  line-height: 36px;
+  font-size: 30px;
+  color: #000;
+  font-weight: 600;
+}
+
+.job-list-grid-container {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.job-list-grid {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.job-list-grid .ab-left {
+  position: absolute;
+  color: #b3b8c5 !important;
+  left: 0.7rem;
+  right: auto;
+  z-index: 1;
+  top: 0.7rem;
+}
+
+.job-list-grid .ab-right {
+  position: absolute;
+  right: 0.7rem;
+  left: auto;
+  top: 0.7rem;
+  z-index: 1;
+}
+
+.job-list-grid .ab-right .job-theme-lc {
+  font-size: 90%;
+  color: #28b661 !important;
+  background: rgba(40, 182, 97, 0.11);
+  border-radius: 0.25rem !important;
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+}
+
+.job-list-grid .job-grid-caption {
+  font-weight: 20px;
+  padding-top: 3rem !important;
+  text-align: center !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.job-list-grid .job-grid-thumb {
+  color: #000;
+  text-align: center !important;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+/* ===================================
+    NEWSLETTER SECTION STARTS HERE
+====================================== */
+.news-bg {
+  background-image: url("assets/img/landing-bg.png");
+  background-color: #03343b;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0 60px;
+}
+
+.news-bg .container {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.news-header {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #ffffff !important;
+}
+
+.news-header h6 {
+  line-height: 20px;
+  font-size: 16px;
+}
+
+.news-header h2 {
+  font-weight: 600;
+  line-height: 36px;
+  font-size: 30px;
+}
+
+.news-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-form .form {
+  position: relative;
+  height: 60px;
+  width: 600px;
+  font-family: inherit;
+}
+
+.news-form .form input {
+  height: 100%;
+  width: 100%;
+  padding: 10px 0;
+  padding-left: 32px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: none;
+  font-family: inherit;
+}
+
+.news-form .form input::placeholder {
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.news-form .form .bx-envelope {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  color: #aeb3bb;
+  font-size: 17px;
+}
+
+.news-form .form button {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  padding: 17px 40px;
+  outline: none;
+  cursor: pointer;
+  background: #28b661;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-family: inherit;
+}
+
+/* ===================================
+    ABOUT PAGE SECTION STARTS HERE
+====================================== */
+
+.about-us {
+  margin-top: 50px;
+  padding: 50px 0 50px;
+}
+
+.about-us-content {
+  /* display: grid;
+  grid-template-columns: repeat(2, 1fr); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-us-caption {
+  max-width: 50%;
+}
+.about-us-caption h2 {
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 1.5rem !important;
+  line-height: 36px;
+  font-size: 30px;
+}
+
+.about-us-caption p {
+  margin-bottom: 1.5rem !important;
+  line-height: 1.8;
+}
+
+.about-us-caption .about-btn {
+  margin: 1.5rem 0 1rem;
+}
+
+.about-us-caption .g-btn {
+  display: inline-block;
+  background: #28b661;
+  color: #fff;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 0.1rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===================================
+    CONTACT US PAGE STARTS HERE
+====================================== */
+
+.contact-us {
+  margin-top: 50px;
+  padding: 50px 0 50px;
+}
+
+.contact-us-header {
+  font-size: 55px;
+  text-align: center;
+  color: #000000;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.contact-us-content {
+  display: grid;
+  grid-template-columns: 34% 66%;
+  gap: 1rem;
+}
+
+.contact-us-content-card {
+  background-color: #f4f5f7;
+  padding: 1rem;
+  margin-bottom: 1.5rem !important;
+  border-radius: 0.25rem !important;
+}
+
+/* .contact-us-content-card:first-child p:nth-child(3) {
+  
+} */
+
+.contact-us-content-card h4 {
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #28b661 !important;
+  margin-bottom: 1rem;
+}
+
+.contact-us p {
+  line-height: 20px;
+  margin-bottom: 0.25rem !important;
+}
+
+.contact-us-content-card h6 {
+  color: #000000;
+  margin-bottom: 0.25rem !important;
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+.contact-us-form {
+  padding: 5px 30px;
+}
+
+.contact-us-form .form-control {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.contact-us-form .form-control label {
+  display: block;
+  margin-bottom: 5px;
+  color: #172228;
+  font-weight: 400;
+}
+
+.contact-us-form .form-control input {
+  display: block;
+  width: 100%;
+  height: 52px !important;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 1px;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+}
+
+.contact-us-form .form-control textarea {
+  display: block;
+  width: 100%;
+  height: 140px !important;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 1px;
+  resize: vertical;
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.contact-us-form .btn {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 1px;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #172228;
+  border: none;
+}
+
+/* ===================================
+    POSTJOB PAGE STARTS HERE
+====================================== */
+.post-job {
+  margin-top: 4rem;
+  padding: 50px 0 50px;
+  background: #f5f7f9;
+  /* height: 100vh; */
+}
+
+.post-job-header {
+  text-align: center;
+}
+
+.post-job-header h1 {
+  line-height: 40px;
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.post-job-form-container {
+  /* margin: ; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-job-form {
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  width: 800px;
+  padding: 1rem !important;
+}
+
+.post-job-form .form-control {
+  margin-bottom: 20px;
+}
+
+.post-job-form .form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.post-job-form .form-control .form-input {
+  width: 100%;
+  height: 52px !important;
+  padding: 10px 15px;
+  font-size: 15px;
+  border: 1px solid #e5e5e5;
+}
+
+.post-job-form .form-control textarea {
+  display: block;
+  width: 100%;
+  height: 140px !important;
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 1px;
+  resize: vertical;
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+  /* border: 1px solid rgba(0, 0, 0, 0.15); */
+  border: 1px solid #e5e5e5;
+}
+
+.post-job-form .form-control .btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.1rem;
+  background-color: #28b661;
+  color: #fff;
+  padding: 14px 30px;
+}
+
+/* ===================================
+    LOGIN $ REGISTRATION PAGE STARTS HERE
+====================================== */
+
+.reg {
+  margin-top: 6rem;
+  padding: 50px 0 50px;
+}
+
+.reg-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 2rem;
+}
+
+.reg-form-one {
+  margin-top: 2rem;
+}
+
+.login-form {
+  /* margin: 15px 40px 40px; */
+  padding: 1rem !important;
+  border: 1px solid #e5e5e5;
+}
+
+.login-form .form-control {
+  margin-bottom: 20px;
+}
+
+.login-form .form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-form .form-control .form-input {
+  width: 100%;
+  height: 52px !important;
+  padding: 10px 15px;
+  font-size: 15px;
+  border: 1px solid #e5e5e5;
+}
+
+.login-form .form-control .form-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.login-form .form-control .form-check a {
+  color: #28b661 !important;
+}
+
+.login-form .form-control .login-btn {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  height: 52px !important;
+  padding: 14px 30px;
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 16px !important;
+  background: #28b661 !important;
+  border-radius: 1px;
+  font-family: inherit !important;
+}
+
+.reg-form-two {
+  margin-top: 2rem;
+}
+
+.register-form {
+  /* margin: 15px 40px 40px; */
+  padding: 1rem !important;
+  border: 1px solid #e5e5e5;
+}
+
+.register-form .form-control-outer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-form .form-control-outer .form-control {
+  width: 45%;
+}
+
+.register-form .form-control {
+  margin-bottom: 20px;
+}
+
+.register-form .form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.register-form .form-control .form-input {
+  width: 100%;
+  height: 52px !important;
+  padding: 10px 15px;
+  font-size: 15px;
+  border: 1px solid #e5e5e5;
+}
+
+.register-form .form-control .form-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-form .form-control p {
+  line-height: 1.6;
+}
+
+.register-form .form-control .login-btn {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  height: 52px !important;
+  padding: 14px 30px;
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 16px !important;
+  background: #28b661 !important;
+  border-radius: 1px;
+  font-family: inherit !important;
+}
+
+/* ===================================
+    LOGIN MODAL STARTS HERE
+====================================== */
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  animation-name: modal;
+  animation-duration: 2s;
+}
+
+.modal-container.show-modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  /* margin: 30px auto; */
+  max-width: 100%;
+  width: 500px;
+  animation-name: modalopen;
+  animation-duration: 1s;
+  transition: all 0.4s ease;
+}
+
+.modal .close-btn {
+  background: #f4f5f7;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 15px;
+  border: none;
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+  font-size: 22px;
+  border-radius: 50%;
+}
+
+.modal .close-btn bx-x {
+}
+
+.modal-header {
+  margin: 3rem 0 1.5rem;
+}
+
+.modal-header h2 {
+  text-align: center;
+  color: #000;
+  font-weight: 400;
+  line-height: 36px;
+  font-size: 30px;
+}
+
+.modal-form {
+  margin: 15px 40px 40px;
+}
+
+.modal-form .form-control {
+  margin-bottom: 20px;
+}
+
+.modal-form .form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-control .form-input {
+  width: 100%;
+  height: 52px !important;
+  padding: 10px 15px;
+  font-size: 15px;
+  border: 1px solid #e5e5e5;
+}
+
+.modal-form .form-control .form-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-form .form-control .form-check a {
+  color: #28b661 !important;
+}
+
+.modal-form .form-control .login-btn {
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  height: 52px !important;
+  padding: 14px 30px;
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 16px !important;
+  background: #28b661 !important;
+  border-radius: 1px;
+  font-family: inherit !important;
+}
+
+.modal-form .form-control .text-center {
+  text-align: center;
+}
+
+.modal-form .form-control .text-center a {
+  color: #172228 !important;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===================================
+    FOOTER STARTS HERE
+====================================== */
+
+.footer {
+  background-color: #fff;
+  margin: 2rem 0;
+}
+
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.footer .footer-widget {
+  padding: 60px 0;
+}
+
+.footer-widget-title {
+  margin-bottom: 10px !important;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 26px;
+  color: #000;
+}
+
+.footer-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer-menu li {
+  list-style: none;
+  margin-top: 15px;
+  display: block;
+}
+
+.footer-menu li a {
+  color: #60626a;
+  font-size: 14px;
+}
+
+/* ===================================
+    RESPONSIVENESS STARTS HERE
+====================================== */
+@media (max-width: 954px) {
+  nav .navbar {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-links-wrapper {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    max-width: 250px;
+    width: 100%;
+    height: 100vh;
+    line-height: 40px;
+    padding: 20px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .navbar .nav-links-wrapper .nav-menu-close-btn {
+    display: flex;
+    justify-content: end;
+  }
+
+  .navbar .bx-menu,
+  .nav-links-wrapper .nav-menu-close-btn .bx-x {
+    color: #70798b;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .navbar .bx-menu,
+  .nav-links-wrapper .nav-menu-close-btn .bx-x {
+    display: block;
+  }
+
+  .navbar .nav-links-wrapper .nav-link {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .about-us-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .about-us-caption {
+    max-width: 100%;
+  }
+
+  .contact-us-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .footer-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-header h2 {
+    font-size: 20px;
+  }
+
+  .job-list-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reg-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .news-form .form button {
+    position: absolute;
+    top: 50%;
+    right: 3px;
+    transform: translateY(-50%);
+    padding: 17px 25px;
+    outline: none;
+    cursor: pointer;
+    background: #28b661;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-family: inherit;
+  }
+}
+
+.test {
+  margin: 0;
+}
+
+/* ===================================
+    job Category STARTS HERE
+====================================== */
+
+.job-category-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.job-category-form .form {
+  position: relative;
+  height: 60px;
+  width: 600px;
+  font-family: inherit;
+}
+
+.job-category-form .form select {
+  height: 100%;
+  width: 100%;
+  padding: 10px 0;
+  padding-left: 32px;
+  font-size: 15px;
+  border-radius: 4px;
+  border: none;
+  border: 1px solid #e5e5e5;
+  font-family: inherit;
+}
+
+.job-category-form .form button {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+  padding: 17px 40px;
+  outline: none;
+  cursor: pointer;
+  background: #28b661;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-family: inherit;
+}
+
+.success-msg {
+  color: #28b661;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.error-msg {
+  color: red;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
